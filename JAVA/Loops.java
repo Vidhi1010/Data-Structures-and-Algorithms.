@@ -118,9 +118,9 @@ public class Loops {
             i++;
         }
         System.out.println("prime"); */
-
+/* 
         if (num == 2) {
-            System.out.println("n is prime");
+            System.out.println("num is prime");
         }
         boolean isPrime = true;
         for(int i = 2; i <= Math.sqrt(num); i++) {
@@ -129,10 +129,10 @@ public class Loops {
             }
         }
         if (isPrime == true) {
-            System.out.println("n is prime");
+            System.out.println("num is prime");
         }else{
-            System.out.println("n is not prime");
-        }
+            System.out.println("num is not prime");
+        } */
         
     }
 
