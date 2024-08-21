@@ -18,15 +18,30 @@ public class Function {
         System.out.println("value of a :" + a);
         System.out.println("value of b :" + b);
     }
+
+    public static int calProduct(int a, int b) {
+        int product = a * b;
+        System.out.println(product);
+        return product;
+    }
+
+    public static int factorial(int n) {
+        int f = 1;
+        for(int i = 1; i <= n; i++) {
+            f = f * i;
+        }
+        return f;
+
+    }
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
          //printHelloWorld();
         //calculateSum(a, b);
-        swap(a, b);
-        
-       
-
+        //swap(a, b);
+        //calProduct(a, b);
+        //factorial(5);
+        //System.out.println(factorial(5));
     }
 }
