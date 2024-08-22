@@ -107,6 +107,7 @@ public class Function {
         System.out.println();
     }
 
+    //Binary to decimal
     public static void binToDec(int binNum) {
         int myNum = binNum;
         int pow = 0;
@@ -120,7 +121,8 @@ public class Function {
         }
         System.out.println("decimal of " + myNum + " = " + decNum);
     }
-
+ 
+    //decimal to binary
     public static void decToBin(int n) {
         int myNum = n;
         int pow = 0;
@@ -135,6 +137,7 @@ public class Function {
         System.out.println("binary of " + myNum + " = " + binNum);
     }
 
+    
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         //int a = sc.nextInt();
