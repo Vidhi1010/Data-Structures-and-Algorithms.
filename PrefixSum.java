@@ -10,7 +10,6 @@ public class PrefixSum {//O(n^2)
             prefix[i] = prefix[i-1] + numbers[i];
         }
 
-
         for (int i = 0; i < numbers.length; i++) {
             int start = i;
             for (int j = i; j < numbers.length; j++) {
