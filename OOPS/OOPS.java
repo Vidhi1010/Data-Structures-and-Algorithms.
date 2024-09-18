@@ -52,3 +52,27 @@ class Pen {
         this.tip = newTip;// 'this.tip' refers to the instance variable, 'newTip' is the method parameter
     }
 }
+
+// Define a class
+class Car {
+    // Attributes (properties)
+    String color;
+    String model;
+    int speed;
+
+    // Constructor (initializes the object)
+    Car(String color, String model, int speed) {
+        this.color = color;
+        this.model = model;
+        this.speed = speed;
+    }
+
+    // Methods (behaviors)
+    void accelerate() {
+        speed += 10;
+    }
+
+    void brake() {
+        speed -= 10;
+    }
+}
