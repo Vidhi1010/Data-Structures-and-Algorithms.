@@ -18,6 +18,16 @@ public class OOPS {
         myAcc.username = "Vidhi";
         myAcc.setPassward("123@Vidhi"); */
 
+        /*  // Create an object of the Car class
+         Car myCar = new Car("Red", "Toyota", 0);
+        
+         // Access object attributes
+         System.out.println(myCar.model); // Output: Toyota
+         
+         // Call object methods
+         myCar.accelerate(); 
+         System.out.println(myCar.speed); // Output: 10 */
+
     }
     
 }
@@ -62,6 +72,7 @@ class Car {
 
     // Constructor (initializes the object)
     Car(String color, String model, int speed) {
+        // 'this.model' refers to the instance variable
         this.color = color;
         this.model = model;
         this.speed = speed;
