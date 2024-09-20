@@ -18,7 +18,7 @@ public class Constructors {
        for(int i = 0; i < 3; i++) {
         System.out.println(s2.marks[i]);
        }
-
+       
         /* Student s2 = new Student("Vidhi");
         System.out.println(s2.name); */
     }
@@ -30,12 +30,25 @@ class Student {
     String passward;
     int marks[];
 
-    //copy constructor
-    Student(Student s1) {
+    //shallow copy constructor
+    /* Student(Student s1) {
         marks = new int[3];
         this.name = s1.name;
         this.roll = s1.roll;
         this.marks = s1.marks;
+    }
+ */
+
+
+    //deep copy constructor
+
+    Student(Student s1) {
+        marks = new int[3];
+        this.name = s1.name;
+        this.roll = s1.roll;
+        for (int i = 0; i < marks.length; i++) {
+            this.marks[i] = s1.marks[i];
+        }
     }
 
     Student() {
