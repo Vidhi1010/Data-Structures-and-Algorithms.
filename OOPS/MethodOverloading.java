@@ -6,6 +6,21 @@ public class MethodOverloading {
         System.out.println(c1.sum(10, 20));
         System.out.println(c1.sum(1.5f, 2.5f));
         System.out.println(c1.sum(10, 20, 30));
+
+
+        Deer d = new Deer();
+        d.eat();
+    }
+}
+class Animal {
+    void eat() {
+        System.out.println("eats anything");
+    }
+}
+
+class Deer extends Animal {
+    void eat() {
+        System.out.println("eats grass");
     }
 }
 
