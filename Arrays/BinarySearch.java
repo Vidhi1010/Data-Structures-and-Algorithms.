@@ -1,4 +1,4 @@
-package Problem;
+
 
 public class BinarySearch {//prerequisite - sorted arrays
 
