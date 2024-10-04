@@ -1,4 +1,4 @@
-package Problem;
+
 
 public class PrintSubarrays {//a continuous part of array
 
