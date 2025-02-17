@@ -20,6 +20,7 @@ public class Loops {
         } */
 
         //1 to n
+
         /* 
         int counter = 1;
         System.out.println("Enter a number");
@@ -62,7 +63,8 @@ public class Loops {
             System.out.print(lastDigit + " ");
             n = n / 10;
         }
-        System.out.println(); */
+        System.out.println();
+         */
         
         /* int n = 10899;
         int rev = 0;
@@ -110,7 +112,7 @@ public class Loops {
         } while(true); */
 
         //Prime Number
-        int num = sc.nextInt();
+        //int num = sc.nextInt();
         /* int i = 2;
         while (i < num) {
             if (num % i == 0) {// n is a multiple of i
@@ -134,6 +136,65 @@ public class Loops {
         }else{
             System.out.println("num is not prime");
         } */
+
+
+        //character is upper case or lower case
+
+        /* char ch = sc.next().trim().charAt(0);
+
+        if (ch >= 'a' && ch <= 'z') {
+            System.out.println("Lower case");
+        }else if (ch >= 'A' && ch <= 'Z') {
+            System.out.println("Upper case");
+        }else{
+            System.out.println("Invalid character");
+        } */
+
+        //Fibonacci Series
+/* 
+        int n = sc.nextInt();
+        int a = 0;
+        int b = 1;
+        int count = 2;
+
+        while (count <= n) {
+            int temp = b;
+            b = b + a;
+            a = temp;
+            count++;
+        }
+        System.out.println(b);
+         */
+
+        //Number of count of digits
+
+        /* int n = sc.nextInt();
+        int count = 0;
+        while (n > 0) {
+            int rem = n % 10;
+            if (rem == 3) {
+                count++;
+            }
+            n = n / 10;
+        }
+        System.out.println(count); */
+
+        /* 1 2 3
+           4 5 6
+           7 8 9
+        */
+        
+        /* int n = 3;
+        int counter = 1;
+        for(int i = 1; i <= n; i++) {
+            for(int j = 1; j <= n; j++) {
+                System.out.print(counter + " ");
+                counter++;
+            }
+            System.out.println();
+        } */
+
+        
         
     }
 

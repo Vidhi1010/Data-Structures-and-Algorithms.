@@ -4,7 +4,7 @@ public class Conditionals {
         Scanner sc = new Scanner(System.in);
         int a =  sc.nextInt();
         int b =  sc.nextInt();
-        int button = sc.nextInt();
+        //int button = sc.nextInt();
         /*if(a < 18){
             System.out.println("Under 18");
         }
@@ -30,7 +30,7 @@ public class Conditionals {
             break;
             default : System.out.println("Invalid Button");
         } */
-        switch(button){
+        /* switch(button){
             case 1 : System.out.println("the sum is : " + a+b);
             break;
             case 2 : System.out.println(a-b);
@@ -41,6 +41,21 @@ public class Conditionals {
             break;
             default : System.out.println("Invalid Button");
         }
-        sc.close();
+        sc.close(); */
+
+        /* if (a > b){
+            System.out.println("a is greater");
+        } else if (a < b){
+            System.out.println("b is greater");
+        } else {
+            System.out.println("Both are equal"); 
+            
+        } */
+
+        /* if(a % 2 == 0) {
+            System.out.println("Even");
+        } else {
+            System.out.println("Odd");
+        } */
      }
 }
