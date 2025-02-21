@@ -1,11 +1,12 @@
 public class PrefixSum {//O(n^2)
+
+    
     public static void prefixSum(int[] numbers) {
         int currSum = 0;
         int maxSum = Integer.MIN_VALUE;
         int prefix[] = new int[numbers.length];
 
         prefix[0] = numbers[0];
-        //calculate prefix array
         for(int i = 1; i < prefix.length; i++) {
             prefix[i] = prefix[i-1] + numbers[i];
         }
