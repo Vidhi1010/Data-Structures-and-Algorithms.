@@ -31,6 +31,11 @@ public class MergeSort {
     public static void main(String[] args) {
         int[] arr = {30, 5, 7, 2, 10, 11};
         mergeSort(arr, 0, arr.length - 1);
-        System.out.println(Arrays.toString(arr));
+        //System.out.println(Arrays.toString(arr));
+        String str = "Vidhi";
+        str = "vidhi";
+
+        System.out.println(str);
+
     }
 }

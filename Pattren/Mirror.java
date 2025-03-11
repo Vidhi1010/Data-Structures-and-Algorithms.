@@ -1,12 +1,14 @@
 public class Mirror {
 
-    /* 1111111
+    /* 
+       1111111
        33333
        555
        7
        555
        33333
        1111111
+       
      */
     public static void main(String[] args) {
         int rows = 4;  // The upper half rows count (including middle)
