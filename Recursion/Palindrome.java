@@ -1,16 +1,28 @@
 package Recursion;
 
 public class Palindrome {
-    public static boolean isPalindrome(String str, int left, int right) {
+   /*  public static boolean isPalindrome(String str, int left, int right) {
+        
         //base case
         if (left >= right) {
             return true;
         }
+
         //recursive case
         if (str.charAt(left) != str.charAt(right)) {
             return false;
         }
         
+        return isPalindrome(str, left + 1, right - 1);
+        
+    } */
+    public static boolean isPalindrome(String str, int left, int right) {
+        if(left >= right) {
+            return true;
+        }
+        if(str.charAt(left) != str.charAt(right)) {
+            return false;
+        }
         return isPalindrome(str, left + 1, right - 1);
     }
 
@@ -18,8 +30,8 @@ public class Palindrome {
         return isPalindrome(str, 0, str.length() - 1);
     }
 
-    //without two pointer
 
+    //without two pointers
     public static boolean palindrome(String str) {
         if (str.length() <= 1) {
             return true;
