@@ -5,11 +5,11 @@ public class MaxSubarraySum {
         int maxSum = Integer.MIN_VALUE;
 
         for (int i = 0; i < numbers.length; i++) {
-            int start = i;
+            //int start = i;
             for (int j = i; j < numbers.length; j++) {
-                int end = j;
+                //int end = j;
                 currSum = 0;
-                for (int k = start; k <= end; k++) {// print
+                for (int k = i; k <= j; k++) {// print
                     currSum += numbers[k];
                 }
                 System.out.println(currSum);

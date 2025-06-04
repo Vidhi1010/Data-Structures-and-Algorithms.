@@ -1,5 +1,4 @@
 package ArraysBasic;
-import java.util.*;
 
 public class Pairs {
     public static void printPairs(int arr[]) {

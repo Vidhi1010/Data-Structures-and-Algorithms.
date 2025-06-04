@@ -20,8 +20,8 @@ public class LinearSearch {
     }
 
     public static void main(String[] args) {
-        int key = 10;
-        int[] marks = { 2, 4, 6, 8, 10, 12, 14, 16 };
+        //int key = 10;
+        //int[] marks = { 2, 4, 6, 8, 10, 12, 14, 16 };
 
         String key1 = "samosa";
         String[] menu = {"dosa", "chole bhature", "samosa"};

@@ -3,7 +3,7 @@ import java.util.*;
 
 public class ReverseArray {
 
-    public static int[] reverse(int[] arr) {
+    public static int[] reverse(int[] arr) { 
         int n = arr.length;
 
         int[] reversedArr = new int[n];  

@@ -1,3 +1,4 @@
+//import java.util.Arrays;
 public class LargestNumber {
 
     public static int largestNumber(int[] numbers) {
@@ -22,6 +23,11 @@ public class LargestNumber {
     public static void main(String[] args) {
 
         int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8};
+        //int n = numbers.length;
+
+        /* Arrays.sort(numbers);//O(n log n)
+        System.out.println(numbers[n - 1]); */
+        
         System.out.println("largest: " + largestNumber(numbers));
         System.out.println("smallest: " + smallestNumber(numbers));
 

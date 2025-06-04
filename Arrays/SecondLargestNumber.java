@@ -1,19 +1,22 @@
-import java.io.*;
 import java.util.Arrays;
 public class SecondLargestNumber {
     public static void main(String[] args) {
         int[] arr = { 1, 2, 4, 6, 7, 5 };
-        int n = arr.length;
-        if (n == 0 || n == 1) {
-            System.out.print(-1);
-            System.out.print(" ");
-            System.out.print(-1);
-            System.out.print("\n");
+        int n = arr.length ;
+        int largest = arr[0];
+
+        for(int i = 0; i < n; i++) {
+            if(arr[i] > largest) {
+                largest = arr[i];
+            }
         }
-        Arrays.sort(arr);
-        int small = arr[1];
-        int large = arr[n - 2];
-        System.out.println("Second smallest is " + small);
-        System.out.println("Second largest is " + large);
+
+        int secondLargest = Integer.MIN_VALUE;
+        for(int i = 0; i < n ; i++) {
+            if(arr[i] > secondLargest && arr[i] != largest) {
+                secondLargest = arr[i];
+            }
+        }
+        
     }
-}
+} 

@@ -1,38 +1,40 @@
 package Sorting;
+
 import java.util.Arrays;
 
 public class QuickSort {
-    public static void quickSort(int[] arr, int l, int r) {
-        if (l < r) {
-            int pivotIndex = partition(arr, l, r);
-            quickSort(arr, l, pivotIndex - 1);
-            quickSort(arr, pivotIndex + 1, r);
+    public static void quickSort(int[] arr, int si, int ei) {
+        if (si >= ei) {
+            return;
         }
+        int pivotIndex = partition(arr, si, ei);
+        quickSort(arr, si, pivotIndex - 1);// left
+        quickSort(arr, pivotIndex + 1, ei);// right
     }
 
-    private static int partition(int[] arr, int l, int r) {
-        int pivot = arr[r]; //last element as pivot
-        int i = l - 1; //index of smaller element
+    private static int partition(int[] arr, int si, int ei) {
+        int pivot = arr[ei]; // last element as pivot
+        int i = si - 1; // to make place for elements smaller than pivot
 
-        for (int j = l; j < r; j++) {
-            if (arr[j] < pivot) {
+        for (int j = si; j < ei; j++) {
+            if (arr[j] <= pivot) {
                 i++;
-                swap(arr, i, j);
+                int temp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp;
             }
         }
-
-        swap(arr, i + 1, r);
-        return i + 1; //returns pivot index
+        // place pivot at correct position
+        i++;
+        int temp = pivot;
+        arr[ei] = arr[i];
+        arr[i] = temp;
+        return i; // returns pivot index
     }
 
-    private static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
 
     public static void main(String[] args) {
-        int[] arr = {4, 2, 5, 7, 3, 9};
+        int[] arr = { 4, 2, 5, 7, 3, 9 };
         quickSort(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
     }
