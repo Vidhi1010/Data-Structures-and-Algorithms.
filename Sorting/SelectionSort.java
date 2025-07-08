@@ -9,7 +9,7 @@ public class SelectionSort {
                 if(arr[j] < arr[minPosition]) {
                     minPosition = j;
                 }
-            }
+            } 
 
             int temp = arr[minPosition];
             arr[minPosition] = arr[i];

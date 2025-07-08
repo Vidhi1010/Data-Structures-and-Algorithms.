@@ -1,17 +1,19 @@
 package Sorting;
 
-public class BubbleSort {
+import java.util.Arrays;
+
+public class BubbleSort {//sinking sort 
     public static void bubbleSort(int[] arr) {
-        for(int pass = 0; pass < arr.length - 1; pass++) {
-            for(int j = 0; j > arr.length - pass - 1; j++) {
-                if(arr[j] > arr[j + 1]) {
+        for(int pass = 0; pass < arr.length; pass++) {
+            for(int j = 1; j < arr.length - pass; j++) {
+                if(arr[j] < arr[j - 1]) {
                     int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
+                    arr[j] = arr[j - 1];
+                    arr[j - 1] = temp;
                 }
             }
         }
-    }
+    }  
 
 
     public static void bubbleSortOpt(int[] arr) {
@@ -32,15 +34,16 @@ public class BubbleSort {
         }
     }
 
-    public static void printArray(int[] arr) {
+   /*  public static void printArray(int[] arr) {
         for(int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
-    }
+    } */
 
     public static void main(String[] args) {
         int[] arr = {7, 11, 9, 2, 17, 4};
         bubbleSort(arr);
-        printArray(arr);
+        //printArray(arr);
+        System.out.println(Arrays.toString(arr));
     }
 }

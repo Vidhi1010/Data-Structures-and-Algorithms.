@@ -42,21 +42,42 @@ public class Palindrome {
         return isPalindrome(str.substring(1, str.length() - 1));
     }
 
+    //check palindrome in a number
+    public static boolean isPalindrome(int num) {
+        int rev = 0;
+
+        while(num > 0) {
+            int lastDigit = num % 10;
+            rev = rev * 10 + lastDigit;
+            num = num/10;
+        }
+
+        if(rev == num) {
+            return true;
+        }
+
+        return false;
+    }
+
     public static void main(String[] args) {
         String str = "madam";
+
+        int num = 12321;
         
-        if (isPalindrome(str)) {
+        /* if (isPalindrome(str)) {
             System.out.println(str + " is a palindrome");
         } else {
             System.out.println(str + " is not a palindrome");
-        }
+        } */
        
 
 
-        if (isPalindrome(str)) {
+        /* if (isPalindrome(str)) {
             System.out.println(str + " is a palindrome");
         } else {
             System.out.println(str + " is not a palindrome");
-        }
+        } */
+
+        System.out.println(isPalindrome(num));
     }
 }

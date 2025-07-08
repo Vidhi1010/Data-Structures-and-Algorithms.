@@ -1,16 +1,17 @@
+package BinarySearch;
 
 
 public class BinarySearch {//prerequisite - sorted arrays
 
-    public static int binarySearch(int[] numbers, int key) {
-        int start = 0, end = numbers.length - 1;
+    public static int binarySearch(int[] nums, int target) {
+        int start = 0, end = nums.length - 1;
 
         while (start <= end) {
             int mid = (start + end)/2;
 
-            if (numbers[mid] == key) {
+            if (nums[mid] == target) {
                 return mid;
-            } else if (numbers[mid] < key) {//right
+            } else if (nums[mid] < target) {//right
                 start = mid + 1;
             } else {//left
                 end = mid - 1;
