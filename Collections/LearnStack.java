@@ -14,5 +14,6 @@ public class LearnStack {
 
         animals.pop(); // removes the top element
         System.out.println(animals);
+        
     }
 }

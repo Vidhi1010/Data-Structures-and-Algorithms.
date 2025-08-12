@@ -36,7 +36,6 @@ public class LinkedList1 {
     }
 
     // add Last
-
     public void addLast(int data) {
         // step1 = create a new node
         Node newNode = new Node(data);

@@ -1,5 +1,7 @@
 package Recursion;
 
+import java.util.ArrayList;
+
 public class LinearSearch {
     public static int linearSearch(int[] arr, int target, int index) {
         if(arr.length == index) {
@@ -21,11 +23,28 @@ public class LinearSearch {
 
         return arr[index] == target || linearSearchBoolean(arr, target, index + 1); // Using logical OR to combine conditions
     }
-    
+
+    static ArrayList<Integer> list = new ArrayList<>();
+    static void search(int[] arr, int target, int index) {
+
+        if(arr.length == index) {
+            return; // Base case: if index reaches the length of the array, stop searching
+        }
+
+        if(arr[index] == target) {
+            list.add(index); // If the current element matches the target, add the index to the list
+        } 
+
+        search(arr, target, index + 1); // Recursive case: check the next index
+        
+    }
+
     public static void main(String[] args) {
-        int[] arr = {1, 13, 3, 9, 5, 7, 8, 2, 4, 6};
+        int[] arr = {1, 13, 3, 9, 5, 3, 8, 2, 4, 6};
         int target = 8;
-        System.out.println(linearSearch(arr, target, 0));
+        //System.out.println(linearSearch(arr, target, 0));
+        search(arr, 3, 0);
+        System.out.println(list);
     }
     
 }

@@ -44,23 +44,21 @@ public class Palindrome {
 
     //check palindrome in a number
     public static boolean isPalindrome(int num) {
-        int rev = 0;
-
-        while(num > 0) {
-            int lastDigit = num % 10;
-            rev = rev * 10 + lastDigit;
-            num = num/10;
+       return num == reverse(num, 0);
+    }
+    
+    private static int reverse(int num, int rev) {
+        if (num == 0) {
+            return rev;
         }
-
-        if(rev == num) {
-            return true;
-        }
-
-        return false;
+        int lastDigit = num % 10;
+        rev = rev * 10 + lastDigit;
+        return reverse(num / 10, rev);
     }
 
+    
     public static void main(String[] args) {
-        String str = "madam";
+        //String str = "madam";
 
         int num = 12321;
         
