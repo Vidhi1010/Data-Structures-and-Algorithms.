@@ -1,0 +1,60 @@
+##Remove last node##
+
+🔎 Key Idea
+In a singly linked list:
+
+Each node points only forward (no backward pointers).
+
+To remove the last node, you need to find the second-last node (because that node’s next must be set to null).
+
+✅ Algorithm: removeLast()
+Empty list case
+If head == null → nothing to remove.
+
+Single node case
+If head == tail → set both head = null and tail = null.
+
+General case (2+ nodes)
+
+Start from head.
+
+Traverse until you reach the second-last node (temp.next == tail).
+
+Set temp.next = null.
+
+Update tail = temp.
+
+
+## Delete node by it's value
+
+🔎 Cases to Handle
+1. When you want to delete a node with some key (say value = 20), there are 3 possible situations:
+
+Empty list → Nothing to delete.
+
+2. The node to delete is at the head → Just move head forward.
+
+3. The node is in the middle or end → Traverse the list, find the node just before the target, then skip over the target node.
+
+✅ Algorithm
+1. If list is empty (head == null) → return.
+
+2. If head.data == value:
+
+  *Move head = head.next.
+
+  *If the deleted node was also tail, set tail = null.
+
+3. Otherwise:
+
+  *Start with temp = head.
+
+   *Traverse until temp.next.data == value.
+
+   *If found:
+
+        *Do temp.next = temp.next.next.
+
+        *If the deleted node was tail, update tail = temp.
+
+
