@@ -5,17 +5,17 @@ public class PrimeNumber {
 
         if (n <= 1) {
             return false; // 0 and 1 are not prime numbers
-        }
-
-        for(int i = 2; i*i < n; i++) {
+        } else {
+            for(int i = 2; i < Math.sqrt(n); i++) {
             if(n % i == 0) {
                 return false;
             }
         }
+        }
         return true;
     }
     public static void main(String[] args) {
-        int n = 17;
+        int n = 7;
 
         System.out.println(isPrime(n));
     }

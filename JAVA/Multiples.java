@@ -4,7 +4,6 @@ public class Multiples {
 
         if (n <= 1) {
             return false;
-
         }
         for (int i = 2; i < n; i++) {
             if (n % i == 0) {
@@ -14,6 +13,7 @@ public class Multiples {
         return true;
 
     }
+    
 
     public static void printNum(int n) {
         if (n <= 100) {
@@ -36,8 +36,8 @@ public class Multiples {
 
         while (n != 0) {
 
-            int rem = n % 10;
-            System.out.println(rem);
+            int lastdigit = n % 10;
+            System.out.println(lastdigit);
             n = n / 10;
 
         }
@@ -89,6 +89,16 @@ public class Multiples {
             return 1;
         }
         return n*recursiveFact(n - 1);
+    }
+
+    public static int factorial1(int n) {
+        int fact = 1;
+
+        for(int i = 1; i <= n; i++) {
+            fact = fact * i;
+        }
+
+        return fact;
     }
 
     public static void fibonacci(int n) {
@@ -185,6 +195,17 @@ public class Multiples {
             }
         }
     }
+
+    public static int GCD(int n1, int n2) {
+        int gt = 1;
+        for(int i = 1; i <Math.min(n1, n2); i++) {
+            if(n1 % i == 0 && n2 % i == 0) {
+                gt = i;
+            }
+        }
+        return gt;
+    }
+
     public static void main(String[] args) {
         /*
          * int n = 10;
@@ -194,7 +215,7 @@ public class Multiples {
          * }
          * }
          */
-        // System.out.println(prime(16));
+        //System.out.println(prime(2));
         // printNum(1);
         //digitCount(123456);
         //digitsInNumber(123456);
@@ -205,7 +226,9 @@ public class Multiples {
         //armstrongNumber(1634);
         //System.out.println(recursiveFact(5));
         //strongNumber(145);
-        multiples(18);
+        //multiples(18);
+        //System.out.println(factorial1(0));
+        System.out.println(GCD(2, 4));
 
 
     }
